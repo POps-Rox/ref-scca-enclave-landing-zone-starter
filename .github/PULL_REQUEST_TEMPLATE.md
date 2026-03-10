@@ -1,44 +1,26 @@
-<!--
-IF SUFFICIENT INFORMATION IS NOT PROVIDED VIA THE FOLLOWING TEMPLATE THE ISSUE MIGHT BE CLOSED WITHOUT FURTHER CONSIDERATION OR INVESTIGATION
+## Task Issue
 
-Please provide us with the following information
----------------------------------------------------------------
--->
+Closes #<!-- issue number -->
 
-# Description
+## Description
 
-_Please explain the changes you've made._
+<!-- What changes does this PR make and why? -->
 
-# Issue reference
+## Checklist
 
-The issue this PR will close: #[issue number]
+- [ ] Linked to task issue
+- [ ] Changes are minimal (only what the task requires)
+- [ ] Tests added/updated
+- [ ] All tests pass (`make test`)
+- [ ] Linting passes (`make lint`)
+- [ ] No secrets or credentials committed
+- [ ] Documentation updated (if applicable)
+- [ ] Follows project conventions (docs/conventions.md)
 
-# Pipeline references
+## Reviewer Notes
 
-> For module/pipeline changes, please create and attach the status badge of your successful run.
+<!-- Anything reviewers should know or pay attention to -->
 
-| Pipeline |
-| - |
-| |
+## Security Considerations
 
-# Type of Change
-
-Please delete options that are not relevant.
-
-```bash
-- [ ] Bugfix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Update to documentation
-```
-
-# Checklist
-
-Please make sure you've completed the relevant tasks for this PR out of the following list:
-
-```bash
-- [ ] All acceptance criteria in the backlog item are met
-- [ ] The documentation is updated to cover any new or changed features
-- [ ] Manual tests have passed
-- [ ] Relevant issues are linked to this PR
-```
+<!-- Any security implications of these changes? (new inputs, auth changes, dependency updates, etc.) -->
