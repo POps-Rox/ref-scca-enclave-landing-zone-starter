@@ -20,7 +20,6 @@ AUTHOR/S: jrspinella
 module "mod_ops_network" {
   providers = { azurerm = azurerm.operations }
   source    = "github.com/POps-Rox/tf-az-overlays-managementspoke"
-  version   = "7.0.0-beta4"
 
   # By default, this module will create a resource group, provide the name here
   # To use an existing resource group, specify the existing_resource_group_name argument to the existing resource group, 
@@ -94,7 +93,6 @@ module "mod_ops_network" {
 module "mod_hub_to_ops_vnet_peering" {
   providers = { azurerm = azurerm.operations }
   source    = "github.com/POps-Rox/tf-az-overlays-vnetpeering"
-  version   = "1.0.1"
 
   location           = var.default_location
   deploy_environment = var.deploy_environment
@@ -123,7 +121,6 @@ module "mod_hub_to_ops_vnet_peering" {
 module "mod_logging" {
   providers = { azurerm = azurerm.operations }
   source    = "github.com/POps-Rox/tf-az-overlays-managementlogging"
-  version   = "4.0.1"
 
   #####################################
   ## Global Settings Configuration  ###
@@ -188,7 +185,6 @@ module "mod_logging" {
 module "mod_ampls" {
   providers = { azurerm = azurerm.operations }
   source    = "github.com/POps-Rox/tf-az-overlays-monitorprivatelinkscope"
-  version   = "0.2.1"
 
   count = var.enable_ampls ? 1 : 0
 

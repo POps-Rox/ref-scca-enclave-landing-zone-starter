@@ -17,7 +17,6 @@ AUTHOR/S: jrspinella
 module "mod_id_network" {
   providers = { azurerm = azurerm.identity }
   source    = "github.com/POps-Rox/tf-az-overlays-managementspoke"
-  version   = "7.0.0-beta4"
 
   # By default, this module will create a resource group, provide the name here
   # To use an existing resource group, specify the existing_resource_group_name argument to the existing resource group, 
@@ -91,7 +90,6 @@ module "mod_id_network" {
 module "mod_hub_to_id_vnet_peering" {
   providers = { azurerm = azurerm.identity }
   source    = "github.com/POps-Rox/tf-az-overlays-vnetpeering"
-  version   = "1.0.1"
 
   location           = var.default_location
   deploy_environment = var.deploy_environment

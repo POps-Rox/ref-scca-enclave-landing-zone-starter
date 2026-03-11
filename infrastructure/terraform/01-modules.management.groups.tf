@@ -14,7 +14,6 @@ AUTHOR/S: jrspinella
 
 module "mod_management_group" {
   source            = "github.com/POps-Rox/tf-az-overlays-managementgroups"
-  version           = "1.0.0"
   count             = var.enable_management_groups ? 1 : 0 # used in testing
   root_id           = var.root_management_group_id
   root_parent_id    = data.azurerm_client_config.root.tenant_id

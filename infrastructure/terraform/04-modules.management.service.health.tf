@@ -16,7 +16,6 @@ AUTHOR/S: jrspinella
 module "mod_service_health_monitoring" {
   providers = { azurerm = azurerm.hub }
   source    = "github.com/POps-Rox/tf-az-overlays-monitoringservicealerts"
-  version   = "0.1.0"
 
   count = var.enable_service_health_monitoring ? 1 : 0
 

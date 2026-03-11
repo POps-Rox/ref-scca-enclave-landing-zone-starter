@@ -21,7 +21,6 @@ AUTHOR/S: jrspinella
 module "mod_hub_network" {
   providers = { azurerm = azurerm.hub }
   source    = "github.com/POps-Rox/tf-az-overlays-managementhub"
-  version   = "8.0.0-beta6"
 
   # By default, this module will create a resource group, provide the name here
   # To use an existing resource group, specify the existing_resource_group_name argument to the existing resource group, 
