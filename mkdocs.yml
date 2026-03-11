@@ -1,0 +1,18 @@
+site_name: "SCCA Landing Zone Starter"
+site_description: Documentation for SCCA Landing Zone Starter
+repo_url: https://github.com/POps-Rox/ref-scca-enclave-landing-zone-starter
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
