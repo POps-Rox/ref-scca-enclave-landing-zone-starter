@@ -11,7 +11,7 @@ data "azurerm_client_config" "root" {}
 
 # This module will lookup the Azure Region and return the short name for the region
 module "mod_azregions_lookup" {
-  source  = "azurenoops/overlays-azregions-lookup/azurerm"
+  source  = "github.com/POps-Rox/tf-az-overlays-azregionslookup"
   version = "1.0.1"
 
   azure_region = var.default_location

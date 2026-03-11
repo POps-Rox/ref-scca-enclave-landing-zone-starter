@@ -13,7 +13,7 @@ AUTHOR/S: jrspinella
 ########################################
 
 module "mod_management_group" {
-  source            = "azurenoops/overlays-management-groups/azurerm"
+  source            = "github.com/POps-Rox/tf-az-overlays-managementgroups"
   version           = "1.0.0"
   count             = var.enable_management_groups ? 1 : 0 # used in testing
   root_id           = var.root_management_group_id

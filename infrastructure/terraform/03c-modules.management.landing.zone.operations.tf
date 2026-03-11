@@ -19,7 +19,7 @@ AUTHOR/S: jrspinella
 // Resources for the Operations Spoke
 module "mod_ops_network" {
   providers = { azurerm = azurerm.operations }
-  source    = "azurenoops/overlays-management-spoke/azurerm"
+  source    = "github.com/POps-Rox/tf-az-overlays-managementspoke"
   version   = "7.0.0-beta4"
 
   # By default, this module will create a resource group, provide the name here
@@ -93,7 +93,7 @@ module "mod_ops_network" {
 # Create VNet Peering between Hub and Operations VNets
 module "mod_hub_to_ops_vnet_peering" {
   providers = { azurerm = azurerm.operations }
-  source    = "azurenoops/overlays-vnet-peering/azurerm"
+  source    = "github.com/POps-Rox/tf-az-overlays-vnetpeering"
   version   = "1.0.1"
 
   location           = var.default_location
@@ -122,7 +122,7 @@ module "mod_hub_to_ops_vnet_peering" {
 
 module "mod_logging" {
   providers = { azurerm = azurerm.operations }
-  source    = "azurenoops/overlays-management-logging/azurerm"
+  source    = "github.com/POps-Rox/tf-az-overlays-managementlogging"
   version   = "4.0.1"
 
   #####################################
@@ -187,7 +187,7 @@ module "mod_logging" {
 
 module "mod_ampls" {
   providers = { azurerm = azurerm.operations }
-  source    = "azurenoops/overlays-azure-monitor-private-link-scope/azurerm"
+  source    = "github.com/POps-Rox/tf-az-overlays-monitorprivatelinkscope"
   version   = "0.2.1"
 
   count = var.enable_ampls ? 1 : 0

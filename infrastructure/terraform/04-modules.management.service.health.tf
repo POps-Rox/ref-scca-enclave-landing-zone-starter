@@ -15,7 +15,7 @@ AUTHOR/S: jrspinella
 # This module will create a monitoring service alerts on MPE resources
 module "mod_service_health_monitoring" {
   providers = { azurerm = azurerm.hub }
-  source    = "azurenoops/overlays-monitoring-service-alerts/azurerm"
+  source    = "github.com/POps-Rox/tf-az-overlays-monitoringservicealerts"
   version   = "0.1.0"
 
   count = var.enable_service_health_monitoring ? 1 : 0

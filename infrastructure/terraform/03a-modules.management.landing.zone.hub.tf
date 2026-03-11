@@ -20,7 +20,7 @@ AUTHOR/S: jrspinella
 
 module "mod_hub_network" {
   providers = { azurerm = azurerm.hub }
-  source    = "azurenoops/overlays-management-hub/azurerm"
+  source    = "github.com/POps-Rox/tf-az-overlays-managementhub"
   version   = "8.0.0-beta6"
 
   # By default, this module will create a resource group, provide the name here

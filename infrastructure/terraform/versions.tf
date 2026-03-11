@@ -25,7 +25,7 @@ terraform {
       version = ">= 3.7.0, < 5.0"
     }
     azurenoopsutils = {
-      source  = "azurenoops/azurenoopsutils"
+      source  = "POps-Rox/azurenoopsutils"
       version = "~> 1.0.4"
     }
   }

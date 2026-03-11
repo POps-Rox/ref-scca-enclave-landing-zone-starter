@@ -13,7 +13,7 @@ AUTHOR/S: jrspinella
 ###########################
 
 module "mod_custom_roles" {
-  source                  = "azurenoops/overlays-role-definition/azurerm"
+  source                  = "github.com/POps-Rox/tf-az-overlays-roledefinition"
   version                 = "0.1.1"
   count                   = var.deploy_custom_roles ? 1 : 0
   custom_role_definitions = local.custom_role_definitions # from locals.tf

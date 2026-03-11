@@ -18,7 +18,7 @@ AUTHOR/S: jrspinella
 // Resources for the Shared Services Spoke
 module "mod_devsecops_network" {
   providers = { azurerm = azurerm.devsecops }
-  source    = "azurenoops/overlays-management-spoke/azurerm"
+  source    = "github.com/POps-Rox/tf-az-overlays-managementspoke"
   version   = "7.0.0-beta4"
 
   # By default, this module will create a resource group, provide the name here
@@ -92,7 +92,7 @@ module "mod_devsecops_network" {
 # Create VNet Peering between Hub and DevSecOps VNets
 module "mod_hub_to_devsecops_vnet_peering" {
   providers = { azurerm = azurerm.devsecops }
-  source    = "azurenoops/overlays-vnet-peering/azurerm"
+  source    = "github.com/POps-Rox/tf-az-overlays-vnetpeering"
   version   = "1.0.1"
 
   location           = var.default_location
