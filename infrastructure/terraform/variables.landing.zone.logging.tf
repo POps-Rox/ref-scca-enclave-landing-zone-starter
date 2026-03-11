@@ -77,7 +77,7 @@ variable "log_analytics_workspace_internet_query_enabled" {
 variable "enable_ampls" {
   description = "Enable Azure Monitor Private Link Scope. Default is false."
   type        = bool
-  default     = false  
+  default     = false
 }
 
 #####################################

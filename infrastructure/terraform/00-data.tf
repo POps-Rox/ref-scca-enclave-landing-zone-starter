@@ -19,7 +19,7 @@ module "mod_azregions_lookup" {
 
 # Azure Commerical Regions Data
 module "az_regions" {
-  count             = var.environment == "public" ? 1 : 0
+  count           = var.environment == "public" ? 1 : 0
   source          = "Azure/regions/azurerm"
   version         = "0.7.0"
   use_cached_data = false

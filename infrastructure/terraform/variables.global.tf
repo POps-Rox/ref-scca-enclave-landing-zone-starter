@@ -99,7 +99,7 @@ variable "subscription_id_devsecops" {
 variable "enable_customer_managed_keys" {
   description = "Enable customer managed keys for the keyvault."
   type        = bool
-  default     = false  
+  default     = false
 }
 
 #################################

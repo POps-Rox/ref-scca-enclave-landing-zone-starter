@@ -27,13 +27,13 @@ terraform {
     azurenoopsutils = {
       source  = "azurenoops/azurenoopsutils"
       version = "~> 1.0.4"
-    }       
+    }
   }
 }
 
 provider "azurerm" {
-  subscription_id = var.subscription_id_hub
-  environment     = var.environment
+  subscription_id            = var.subscription_id_hub
+  environment                = var.environment
   skip_provider_registration = var.environment == "usgovernment" ? true : false
   features {
     log_analytics_workspace {
@@ -50,9 +50,9 @@ provider "azurerm" {
 }
 
 provider "azurerm" {
-  alias           = "hub"
-  subscription_id = var.subscription_id_hub
-  environment     = var.environment
+  alias                      = "hub"
+  subscription_id            = var.subscription_id_hub
+  environment                = var.environment
   skip_provider_registration = var.environment == "usgovernment" ? true : false
   features {
     log_analytics_workspace {
@@ -69,9 +69,9 @@ provider "azurerm" {
 }
 
 provider "azurerm" {
-  alias           = "identity"
-  subscription_id = coalesce(var.subscription_id_identity, var.subscription_id_hub)
-  environment     = var.environment
+  alias                      = "identity"
+  subscription_id            = coalesce(var.subscription_id_identity, var.subscription_id_hub)
+  environment                = var.environment
   skip_provider_registration = var.environment == "usgovernment" ? true : false
   features {
     log_analytics_workspace {
@@ -88,9 +88,9 @@ provider "azurerm" {
 }
 
 provider "azurerm" {
-  alias           = "operations"
-  subscription_id = coalesce(var.subscription_id_operations, var.subscription_id_hub)
-  environment     = var.environment
+  alias                      = "operations"
+  subscription_id            = coalesce(var.subscription_id_operations, var.subscription_id_hub)
+  environment                = var.environment
   skip_provider_registration = var.environment == "usgovernment" ? true : false
   features {
     log_analytics_workspace {
@@ -107,9 +107,9 @@ provider "azurerm" {
 }
 
 provider "azurerm" {
-  alias           = "security"
-  subscription_id = coalesce(var.subscription_id_security, var.subscription_id_hub)
-  environment     = var.environment
+  alias                      = "security"
+  subscription_id            = coalesce(var.subscription_id_security, var.subscription_id_hub)
+  environment                = var.environment
   skip_provider_registration = var.environment == "usgovernment" ? true : false
   features {
     log_analytics_workspace {
@@ -147,9 +147,9 @@ provider "azurerm" {
 */
 
 provider "azurerm" {
-  alias           = "devsecops"
-  subscription_id = coalesce(var.subscription_id_devsecops, var.subscription_id_hub)
-  environment     = var.environment
+  alias                      = "devsecops"
+  subscription_id            = coalesce(var.subscription_id_devsecops, var.subscription_id_hub)
+  environment                = var.environment
   skip_provider_registration = var.environment == "usgovernment" ? true : false
   features {
     log_analytics_workspace {

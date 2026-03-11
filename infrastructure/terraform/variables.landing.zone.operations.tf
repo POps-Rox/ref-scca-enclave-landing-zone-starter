@@ -71,7 +71,7 @@ variable "enable_forced_tunneling_on_ops_route_table" {
 variable "ops_storage_bypass_ip_cidrs" {
   description = "The IP addresses to bypass for the Operations storage account."
   type        = list(string)
-  default    = []  
+  default     = []
 }
 
 variable "ops_storage_account_kind" {

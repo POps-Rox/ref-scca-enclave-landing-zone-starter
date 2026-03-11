@@ -77,7 +77,7 @@ variable "enable_forced_tunneling_on_security_route_table" {
 variable "security_storage_bypass_ip_cidrs" {
   description = "The IP addresses to bypass for the Security storage account."
   type        = list(string)
-  default    = []  
+  default     = []
 }
 
 variable "security_storage_account_kind" {

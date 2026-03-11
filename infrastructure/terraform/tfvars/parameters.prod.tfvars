@@ -6,8 +6,8 @@
 ###########################
 
 # The prefixes to use for all resources in this deployment
-org_name           = "anoa"    # This Prefix will be used on most deployed resources.  10 Characters max.
-deploy_environment = "prod"    # dev | test | prod
+org_name           = "anoa"   # This Prefix will be used on most deployed resources.  10 Characters max.
+deploy_environment = "prod"   # dev | test | prod
 environment        = "public" # public | usgovernment
 
 # The default region to deploy to
@@ -20,7 +20,7 @@ enable_resource_locks = false # true | false
 # 01 Management Groups Configuration  ##
 ########################################
 
-enable_management_groups           = false   # enable management groups for this subscription
+enable_management_groups           = false  # enable management groups for this subscription
 root_management_group_id           = "anoa" # the root management group id for this subscription
 root_management_group_display_name = "anoa" # the root management group display name for this subscription
 
@@ -168,7 +168,7 @@ enable_dns_proxy = true
 dns_servers = ["168.63.129.16"]
 
 # CIDRs for Hub Azure Storage Account to bypass Azure Firewall
-hub_storage_bypass_ip_cidrs =[]
+hub_storage_bypass_ip_cidrs = []
 
 # # (Optional) specify the Network rules for Azure Firewall l
 # This is default values, do not need this if keeping default values

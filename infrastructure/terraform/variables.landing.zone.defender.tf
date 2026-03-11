@@ -17,7 +17,7 @@
 variable "enable_defender_for_cloud" {
   description = "Enable Defender for Cloud."
   type        = bool
-  default     = true  
+  default     = true
 }
 
 variable "security_center_pricing_tier" {

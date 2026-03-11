@@ -17,7 +17,7 @@
 variable "deploy_identity_spoke" {
   description = "Deploy the identity spoke."
   type        = bool
-  default     = true  
+  default     = true
 }
 
 variable "id_vnet_address_space" {
@@ -77,7 +77,7 @@ variable "enable_forced_tunneling_on_id_route_table" {
 variable "id_storage_bypass_ip_cidrs" {
   description = "The IP addresses to bypass for the Identity storage account."
   type        = list(string)
-  default    = []  
+  default     = []
 }
 
 variable "id_storage_account_kind" {

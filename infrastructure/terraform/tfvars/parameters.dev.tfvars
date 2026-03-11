@@ -6,7 +6,7 @@
 ###########################
 
 # The prefixes to use for all resources in this deployment
-org_name           = "anoa"    # This Prefix will be used on most deployed resources.  10 Characters max.
+org_name           = "anoa"   # This Prefix will be used on most deployed resources.  10 Characters max.
 deploy_environment = "dev"    # dev | test | prod
 environment        = "public" # public | usgovernment
 
@@ -20,7 +20,7 @@ enable_resource_locks = false # true | false
 # 01 Management Groups Configuration  ##
 ########################################
 
-enable_management_groups           = true  # enable management groups for this subscription
+enable_management_groups           = true   # enable management groups for this subscription
 root_management_group_id           = "anoa" # the root management group id for this subscription
 root_management_group_display_name = "anoa" # the root management group display name for this subscription
 

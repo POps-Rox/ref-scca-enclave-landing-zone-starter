@@ -19,7 +19,7 @@ locals {
     "Microsoft.ServiceBus",
     "Microsoft.Sql",
     "Microsoft.Storage",
-  ] : [
+    ] : [
     "Microsoft.AzureCosmosDB",
     "Microsoft.EventHub",
     "Microsoft.KeyVault",
@@ -93,25 +93,25 @@ locals {
       subscription_ids           = ["${var.subscription_id_operations}"]
     },
     /* UNCOMMENT IF YOU ARE USIMG FORENSICS SUB (US GOVERNMENT) */
-  /*   forensic = {
+    /*   forensic = {
       display_name               = "forensic"
       management_group_name      = "forensic"
       parent_management_group_id = "platforms"
       subscription_ids           = ["${var.subscription_id_forensic}"]
     }, */
-     identity = {
+    identity = {
       display_name               = "identity"
       management_group_name      = "identity"
       parent_management_group_id = "platforms"
       subscription_ids           = ["${var.subscription_id_identity}"]
     },
-     security = {
+    security = {
       display_name               = "security"
       management_group_name      = "security"
       parent_management_group_id = "platforms"
       subscription_ids           = ["${var.subscription_id_security}"]
     },
-     devsecops = {
+    devsecops = {
       display_name               = "devsecops"
       management_group_name      = "devsecops"
       parent_management_group_id = "platforms"
@@ -192,12 +192,12 @@ locals {
 
 # The following locals are Private DNS resource ids
 locals {
-  blob_pdns_id = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.blob.core.windows.net" : "privatelink.blob.core.usgovcloudapi.net"}"
-  vault_pdns_id = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.vaultcore.azure.net" : "privatelink.vaultcore.usgovcloudapi.net"}"
+  blob_pdns_id      = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.blob.core.windows.net" : "privatelink.blob.core.usgovcloudapi.net"}"
+  vault_pdns_id     = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.vaultcore.azure.net" : "privatelink.vaultcore.usgovcloudapi.net"}"
   ampls_agentsvc_id = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.agentsvc.azure-automation.net" : "privatelink.agentsvc.azure-automation.us"}"
-  ampls_monitor_id = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.monitor.azure.com" : "privatelink.monitor.azure.us"}"
-  ampls_ods_id = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.ods.opinsights.azure.com" : "privatelink.ods.opinsights.azure.us"}"
-  ampls_oms_id = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${ var.environment == "public" ? "privatelink.oms.opinsights.azure.com" : "privatelink.oms.opinsights.azure.us"}"
+  ampls_monitor_id  = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.monitor.azure.com" : "privatelink.monitor.azure.us"}"
+  ampls_ods_id      = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.ods.opinsights.azure.com" : "privatelink.ods.opinsights.azure.us"}"
+  ampls_oms_id      = "${local.provider_path.subscriptions}${var.subscription_id_hub}/resourceGroups/${module.mod_hub_network.private_dns_zone_resource_group_name}/providers/Microsoft.Network/privateDnsZones/${var.environment == "public" ? "privatelink.oms.opinsights.azure.com" : "privatelink.oms.opinsights.azure.us"}"
 }
 
 # The following locals are used to control time_sleep

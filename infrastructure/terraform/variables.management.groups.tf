@@ -18,14 +18,14 @@ variable "enable_management_groups" {
 
 variable "root_management_group_id" {
   type        = string
-  description = "If specified, will set a custom Name (ID) value for the \"root\" Management Group, and append this to the ID for all core Management Groups." 
-  default = null
+  description = "If specified, will set a custom Name (ID) value for the \"root\" Management Group, and append this to the ID for all core Management Groups."
+  default     = null
 }
 
 variable "root_management_group_display_name" {
   type        = string
   description = "If specified, will set a custom Display Name value for the \"root\" Management Group."
-  default = null  
+  default     = null
 }
 
 ###########################

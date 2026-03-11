@@ -111,7 +111,7 @@ variable "keyvault_sku" {
 variable "keyvault_contact_name" {
   description = "The contact name for the keyvault."
   type        = string
-  default     = "Azure Security"  
+  default     = "Azure Security"
 }
 
 variable "keyvault_contact_email" {
@@ -123,13 +123,13 @@ variable "keyvault_contact_email" {
 variable "keyvault_contact_phone" {
   description = "The contact phone for the keyvault."
   type        = string
-  default     = "123-456-7890"  
+  default     = "123-456-7890"
 }
 
 variable "keyvault_bypass_ip_cidrs" {
   description = "The IP addresses to bypass for the keyvault."
   type        = list(string)
-  default    = []  
+  default     = []
 }
 
 variable "keyvault_public_network_access_enabled" {
@@ -239,6 +239,6 @@ variable "enable_hybrid_use_benefit" {
 variable "enable_encryption_at_host" {
   description = "Enables encryption at host for the Bastion VM."
   type        = bool
-  default     = false  
+  default     = false
 }
 
