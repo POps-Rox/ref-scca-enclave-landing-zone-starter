@@ -112,7 +112,7 @@ Policy is a important piece of an Mission Enclave and required for a ATO to your
 
 If you are interested in learning more about how to apply policy to use in an Mission Enclave, you can use the following resources:
 
-- [Azure NoOps Policy Starter](https://github.com/azurenoops/ref-scca-enclave-policy-starter)
+- [Azure NoOps Policy Starter](https://github.com/POps-Rox/ref-scca-enclave-policy-starter)
 
 However, you can use the following resources to learn more about policy in general:
 
