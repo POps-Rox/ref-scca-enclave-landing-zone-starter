@@ -13,7 +13,7 @@ AUTHOR/S: jrspinella
 ################################
 
 module "mod_microsoft_defender_for_cloud" {
-  source  = "github.com/POps-Rox/tf-az-overlays-defenderforcloud"
+  source = "github.com/POps-Rox/tf-az-overlays-defenderforcloud"
 
   depends_on = [module.mod_logging]
 
