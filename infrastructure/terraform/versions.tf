@@ -22,7 +22,7 @@ terraform {
     }
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 3.7.0, < 5.0"
+      version = "~> 3.116"
     }
     azurenoopsutils = {
       source  = "POps-Rox/azurenoopsutils"
