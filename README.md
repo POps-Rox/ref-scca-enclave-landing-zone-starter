@@ -73,7 +73,7 @@ The below scenario is how to get started on the Mission Enclave Landing Zone imp
 Manual Deployment Details:
 | Deployment Methodology | Manual Deployment |
 |--------------|--------------|
-|Terraform|[Published](https://azurenoops.github.io/terraform-overlays-baseline/deployment/landing-zone/landing-zone-manual/)|
+|Terraform|[Published](https://POps-Rox.github.io/terraform-overlays-baseline/deployment/landing-zone/landing-zone-manual/)|
 
 >NOTE: Using manual deployment to deploy the infrastructure using the Terraform CLI. This is a good option if you want to learn how to deploy the infrastructure using Terraform CLI.
 
@@ -88,7 +88,7 @@ The below scenario is how to get started on the Mission Enclave Landing Zone imp
 E2E GitHub Deployment Details:
 | Deployment Methodology | GitHub Actions | Azure DevOps |
 |--------------|--------------|--------------|
-|Terraform|[In Progress](https://azurenoops.github.io/terraform-overlays-baseline/deployment/landing-zone-github)| Coming soon |
+|Terraform|[In Progress](https://POps-Rox.github.io/terraform-overlays-baseline/deployment/landing-zone-github)| Coming soon |
 
 ## Importance of Separation of Duties (Azure NoOps Shared Responsibility Model) ##
 
