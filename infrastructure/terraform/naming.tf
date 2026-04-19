@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-data "popsrox_utils_resource_name" "kv" {
+data "popsrox_resource_name" "kv" {
   name          = var.keyvault_name
   resource_type = "azurerm_key_vault"
   prefixes      = [var.org_name, module.mod_azregions_lookup.location_short]
@@ -11,7 +11,7 @@ data "popsrox_utils_resource_name" "kv" {
   separator     = "-"
 }
 
-data "popsrox_utils_resource_name" "pe_kv_nic_name" {
+data "popsrox_resource_name" "pe_kv_nic_name" {
   name          = var.keyvault_name
   resource_type = "azurerm_network_interface"
   prefixes      = [var.org_name, module.mod_azregions_lookup.location_short]
@@ -21,7 +21,7 @@ data "popsrox_utils_resource_name" "pe_kv_nic_name" {
   separator     = "-"
 }
 
-data "popsrox_utils_resource_name" "pe_kv_psc_name" {
+data "popsrox_resource_name" "pe_kv_psc_name" {
   name          = var.keyvault_name
   resource_type = "azurerm_private_service_connection"
   prefixes      = [var.org_name, module.mod_azregions_lookup.location_short]
@@ -31,7 +31,7 @@ data "popsrox_utils_resource_name" "pe_kv_psc_name" {
   separator     = "-"
 }
 
-data "popsrox_utils_resource_name" "kv_diags_name" {
+data "popsrox_resource_name" "kv_diags_name" {
   name          = var.keyvault_name
   resource_type = "azurerm_custom_provider"
   prefixes      = [var.org_name, module.mod_azregions_lookup.location_short]
@@ -41,7 +41,7 @@ data "popsrox_utils_resource_name" "kv_diags_name" {
   separator     = "-"
 }
 
-data "popsrox_utils_resource_name" "pe_kv_name" {
+data "popsrox_resource_name" "pe_kv_name" {
   name          = var.keyvault_name
   resource_type = "azurerm_custom_provider"
   prefixes      = [var.org_name, module.mod_azregions_lookup.location_short]
@@ -53,7 +53,7 @@ data "popsrox_utils_resource_name" "pe_kv_name" {
 
 # Windows VM
 
-data "popsrox_utils_resource_name" "windows_jmp_name" {
+data "popsrox_resource_name" "windows_jmp_name" {
   name          = "win-jmp"
   resource_type = "azurerm_windows_virtual_machine"
   prefixes      = [var.org_name, module.mod_azregions_lookup.location_short]
@@ -63,7 +63,7 @@ data "popsrox_utils_resource_name" "windows_jmp_name" {
   separator     = "-"
 }
 
-data "popsrox_utils_resource_name" "windows_nic_name" {
+data "popsrox_resource_name" "windows_nic_name" {
   name          = "win-jmp"
   resource_type = "azurerm_network_interface"
   prefixes      = [var.org_name, module.mod_azregions_lookup.location_short]
